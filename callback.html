@@ -1,0 +1,31 @@
+<script>
+    function change_a(c){
+        let a=10
+        console.log("Value of a is going to change")
+        setTimeout(()=>{
+            c(a) //callback
+        },5000)
+        console.log(`Value of a is changed to ${a}`)
+    }
+    function multiply_a(a){
+        console.log(`Value of a is going to change as a*5 ie. ${a*5}`)
+        console.log("Done")
+    }
+    change_a(multiply_a)
+    console.log("Welcome")
+</script>
+
+<!-- <script>
+    //Without Callback
+    
+    function change_a(){
+        let a;
+        console.log("Value of a is going to change")
+        setTimeout(()=>{
+            a=100
+        },5000)
+        console.log(`Value of a is changed to ${a}`)
+    }
+    change_a()
+    console.log("Done")
+</script> -->
