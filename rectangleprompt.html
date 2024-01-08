@@ -1,0 +1,32 @@
+<script>
+    class rectangle{
+        //constructor method
+        constructor(l,b){
+            this.len=l
+            this.bre=b
+            this.area=0
+        }
+        //prototype method
+        calculate_area(){
+            this.area=this.len*this.bre
+            this.peri=2*(this.len+this.bre)
+        }
+        displaydetails(){
+        alert("Area of rectangle: " +this.area)
+        alert("Perimeter of rectangle: " +this.peri)
+
+        }   
+    }
+    num=prompt("No.of rectangles?")
+    for(i=0;i<num;i++){
+        l=Number(prompt("Enter the length"))
+        b=Number(prompt("Enter the breadth"))
+    
+        ob1=new rectangle(l,b)
+        ob1.calculate_area()
+        ob1.displaydetails()
+    }
+    
+   
+ 
+</script>
