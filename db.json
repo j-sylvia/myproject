@@ -168,6 +168,18 @@
         "rating": "4.8",
         "overviwe": "Excellent food. Menu is extensive and seasonal to a particularly high standard. Definitely fine dining. It can be expensive but worth it and they do different deals on different nights so it’s worth checking them out before you book. Highly recommended.",
         "qnty": 0
+      },
+    {
+        "id": 15,
+        "name": "Noodles",
+        "rname": "RFC",
+        "imgdata": "https://img.freepik.com/premium-photo/fried-noodles-plate_756748-29368.jpg",
+        "address": "city mall patna",
+        "somedata": "525 + order placed from here recently",
+        "price": 130,
+        "rating": "4.8",
+        "overviwe": "Excellent food. Menu is extensive and seasonal to a particularly high standard. Definitely fine dining. It can be expensive but worth it and they do different deals on different nights so it’s worth checking them out before you book. Highly recommended.",
+        "qnty": 0
       }
     ]
 }
