@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        form{
+            text-align: center;
+            margin: 100px 600px;
+            padding: 10px 20px 40px;
+            background-color: whitesmoke;
+            box-shadow: 12px 5px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        <h1>Todo List</h1>
+        <input type="text" id="todo-input" placeholder="Add your new to-do">
+        <input type="button" value="+" onclick="add()">
+        <input type="button" value="-" onclick="remove()"><br><br>
+
+        <div id="todo-list">
+           
+        </div>
+        
+    </form>
+    <script>
+        function add(){
+          todoinput=document.getElementById('todo-input').value;
+          todolist=document.getElementById('todo-list');
+          newtodo=document.createElement('h3')
+          newtodo.innerHTML=todoinput
+          todolist.appendChild(newtodo)
+
+           // Add an event listener to the new task
+            // newtodo.addEventListener('click', function() {
+            // todolist.removeChild(newtodo);
+        //})
+
+        }
+        function remove(){     
+          todoremove=document.querySelector('h3');
+          document.getElementById('todo-list').removeChild(todoremove)
+        }
+        
+    </script>
+</body>
+</html>
