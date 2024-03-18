@@ -22,7 +22,7 @@ function Fetchuser() {
   }, []);
 
   const Filter=(event)=>{
-    setFilter(user.filter(f=>f.name.toLowerCase().includes(event.target.value)))
+    setFilter(user.filter(f=>f.name.toLowerCase().includes(event.target.value.toLowerCase())))
   }
 
   const handleDisplayDetails = (userId) => {
