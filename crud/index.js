@@ -5,13 +5,11 @@ const path=require('path');
 const url=require('url');
 const hbs=require('hbs');
 
-
 const db=mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'admin',
     database:'node_db_1'
-
 });
 
 db.connect((err)=>{
@@ -58,6 +56,7 @@ http.createServer((req,res)=>{
         let body='';
         req.on('data',chunk=>{
             body=body+chunk.toString();
+            // console.log(body)
         });
         req.on('end',()=>{
             const formData=new URLSearchParams(body);
@@ -100,7 +99,9 @@ http.createServer((req,res)=>{
                     res.writeHead(500).end('Error fetching data');   
                 }
                 else{
-                    fs.readFile(template.html,'utf8',(err,templateData)=>{
+                    // console.log(results)
+                    const filePath=path.join(__dirname,'template.html');
+                    fs.readFile(filePath,'utf8',(err,templateData)=>{
                         if(err){
                             console.log('Error reading template file:',err)
                             res.writeHead(500).end('Error reading template file');   
@@ -109,6 +110,7 @@ http.createServer((req,res)=>{
                             //using template engines like handlebars
                             const template=hbs.compile(templateData);
                             const renderedPage=template({data:results});
+                            // console.log(renderedPage)
                             res.writeHead(200,{'Content-Type':'text/html'});
                             res.end(renderedPage);
                         }
