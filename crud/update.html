@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/home">Back to Home</a>
+    <h1>Updated Data</h1>
+    <form action="/update-data" method="POST">
+        <label for="name">Select Name:</label>
+        <select name="name" id="name">
+            {{#each names}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select><br><br>
+        <label for="email">Email: </label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message: </label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        <button type="submit">Update data</button>
+    </form>
+
+    
+</body>
+</html>

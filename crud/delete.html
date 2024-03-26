@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/home">Back to Home</a>
+    <h1>Delete Data</h1>
+    <form action="/delete-data" method="POST">
+        <label for="name">Select Name:</label>
+        <select name="name" id="name">
+            {{#each names}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select><br><br>
+        <button type="submit">Delete data</button>
+    </form>
+
+    
+</body>
+</html>

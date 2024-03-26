@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Display</h1>
+    <div class="data-container">
+        {{#each data}}
+        <div class="data-item">
+            <h2>ID: {{this.id}}</h2>
+            <p>Name: {{this.name}}</p>
+            <p>Email: {{this.email}}</p>
+            <p>Message: {{this.message}}</p>
+        </div>
+        {{/each}}
+    </div>
+
+    <a href="/home">Back to Home</a>
+</body>
+</html>
